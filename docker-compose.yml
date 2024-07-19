@@ -6,8 +6,6 @@ services:
       - ./:/var/www
     ports:
       - 9000:9000
-    stdin_open: true
-    tty: true
   nginx:
     build: ./docker/nginx
     ports:
