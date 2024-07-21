@@ -22,7 +22,8 @@ class Controller_Articles extends Controller_Base
 
   function action_show()
   {
-    $id = $this->param('id');
-
+    $id = intval($this->param('id'));
+    $data['data'] = Model_Article::find_by_pk($id);
+    return View::forge('articles/show', $data);
   }
 }

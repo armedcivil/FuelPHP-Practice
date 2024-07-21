@@ -7063,7 +7063,7 @@ td.visible-print {
 }
 
 #content .article.list {
-  border: solid 3px black;
+  border: solid 2px lightgray;
   border-radius: 12px;
   padding: 12px;
   margin: 4px;
@@ -7083,4 +7083,34 @@ td.visible-print {
   width: 20%;
   float: right;
   align-content: center;
+}
+
+#content div.article.show {
+  display: inline-block !important;
+  width: 80%;
+}
+
+#content div.article.show.sidebar {
+  width: 18%;
+  float: right;
+  font-size: 1.2rem;
+  padding: 3px;
+  border-radius: 6px;
+  border: solid 2px lightgray;
+  margin-left: 12px;
+  margin-top: 36px;
+}
+
+#content div.article.show.sidebar::after {
+  content: "";
+  float: none;
+}
+
+#content div.article.show h1 {
+  border-bottom: solid 2px gray;
+}
+
+#content div.article.show p {
+  font-size: 1.7rem;
+  overflow-wrap: anywhere;
 }
