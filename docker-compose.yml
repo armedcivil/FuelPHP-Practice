@@ -15,3 +15,18 @@ services:
       - ./:/var/www
     depends_on:
       - app
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: burning
+      MYSQL_DATABASE: burning
+      MYSQL_USER: burning
+      MYSQL_PASSWORD: burning
+      MYSQL_TCP_PORT: 3309
+      TZ: 'Asia/Tokyo'
+    restart: always
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - ./docker/db/data:/var/lib/mysql
+    ports:
+      - 3309:3309

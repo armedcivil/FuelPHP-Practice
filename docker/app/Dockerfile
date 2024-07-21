@@ -30,6 +30,8 @@ WORKDIR /
 RUN wget 'https://getcomposer.org/installer' -O 'composer-setup.php'
 RUN php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
+RUN dnf install -y mariadb105 mariadb105-devel
+
 WORKDIR /var/www
 
 CMD [ "php-fpm" ]
