@@ -33,9 +33,14 @@ For example, manual installation of "FuelPHP 1.8.0" is following.
 
 ```bash
 docker-compose exec -it app /bin/bash
+```
+
+```bash
 wget https://fuelphp.com/files/download/36 -O fuelphp-1.8.zip
 unzip fuelphp-1.8.zip
 mv fuelphp-1.8/ fuelphp/       ;<- Important!!
+rm fuelphp-1.8.zip
+exit
 ```
 
 ### Why name of project directory must be "fuelphp"

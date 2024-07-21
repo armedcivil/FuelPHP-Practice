@@ -12,5 +12,6 @@ services:
       - 9090:80
     volumes:
       - ./docker/nginx:/etc/nginx/conf.d
+      - ./:/var/www
     depends_on:
       - app
