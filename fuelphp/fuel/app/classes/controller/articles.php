@@ -24,6 +24,10 @@ class Controller_Articles extends Controller_Base
   {
     $id = intval($this->param('id'));
     $data['data'] = Model_Article::find_by_pk($id);
+    if (!$data['data']) 
+    {
+      return Response::redirect('/404');
+    }
     return View::forge('articles/show', $data);
   }
 }
